@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BookStore</title>
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<script
+  src="http://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+<div id="picBackground">
+	<h1 style="padding-top: 80px;" id="headerText">Search for Books</h1>
+	<h5 id="headerText">This is my books search engine</h5>
+</div>
+
+
+<div class="searchBar">
+	<input type="text" name="search" id="myinput" placeholder="Search for books">
+	<button id="button">Search</button>
+</div>
+
+
+
+<section style="padding-left: 3%">
+
+	<div id="card_holder"></div>
+
+<!-- <div class="card">
+  <img src="Library.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h6>Authors: </h6> 
+    <h6>Publishers: </h6>
+    <h6>Subjects: </h6> 
+  </div>
+</div> -->
+
+
+
+
+<div style="margin-top: 30px" class="container">
+
+	<script type="text/javascript" src="script.js"></script>
+
+<script type="text/javascript">
+
+
+
+
+// var request = new XMLHttpRequest();
+// request.open("GET", "https://random.dog/woof.json", true);
+// request.send();
+// request.onload = function(){
+// 	$("div").append(request.responseText);
+// }
+
+
+// var request = new XMLHttpRequest();
+// var xmlObj;
+// request.open("GET", "https://random.dog/woof.json", true);
+// request.send();
+// request.onload = function(){
+// 	var parser = JSON.parse(request.responseText);
+// 	$("div").append("<img src=" + parser.url + ">");
+// }
+
+ 	
+
+			// $.ajax({
+			// 	type: "GET",
+			// 	url: "https://openlibrary.org/api/books?bibkeys=ISBN:0385472579,LCCN:62019420&format=json",
+
+			// 	dataType: "json",
+			// 	success: function(result){
+			// 		//play with result here
+			// 		// console.log(result);
+			// 		for(i = 0; i < 1; i++){
+			// 		 $("div").append("</br> <img src=" + result[i].image_url + "></br>");
+			// 		 $("div").append(result[i].name + "</br>");
+			// 		 $("div").append(result[i].description + "</br> </br>");
+
+			// 		 var obj = JSON.parse(text);
+			// 		 document.getElementsById()
+
+
+
+
+			// 		}
+			// 	},
+			// 	error: function(message){
+			// 		console.log(message);
+			// 		 $("div").append(message);
+			// 		// display error message here.
+
+			// 	}
+
+			// 	}); 
+
+
+
+
+
+			// var request = new XMLHttpRequest();
+			// var xmlObj;
+			// request.open("GET", "https://official-joke-api.appspot.com/jokes/ten", true);
+			// request.send();
+			// request.onload = function(){
+			// 	var parser = JSON.parse(request.responseText);
+			// 	for(i = 0; i < parser.length; i++){
+			// 		 $("div").append(parser[i].type + "</br>");
+			// 	}
+
+				
+
+			// 	alert(parser.url);
+			// 	$("div").append("<img src="+ parser.url +">");
+
+
+			// 	var parser = new DOMParser();
+			// 	xmlObj = parser.parseFromString(request.responseText, "text/xml");
+			// 	$("div").append(xmlObj.getElementsByTagName("authordisplay")[0].childNodes[0].nodeValue);
+			// }
+		</script>
+
+</div>
+</section>
+
+</body>
+
+
+<footer id="foot">Copyright &copy CCCS310 A4</footer>
+</html>
