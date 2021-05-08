@@ -8,7 +8,6 @@ $('.card img').hide();
 	});
 
 	function search(){
-
 		$(document)
 			.ajaxStart(function () {
 				spinner.show();
@@ -34,8 +33,8 @@ $('.card img').hide();
 				success: function(result){
 						console.log(result.work);
 
-					if(result.work === undefined){
-						alert("Please enter a valid search");}
+						if(result.work === undefined){
+							alert("Please enter a valid search");}
 
 					if ( result.work.length > 0 ) {
 						for( var i = 0; i < result.work.length; i++ ){
@@ -46,9 +45,6 @@ $('.card img').hide();
 					}
 					else if(result.work === undefined){
 						alert("Please enter a valid search");
-
-					} else {
-						alert("Something went wrong.");
 					}
 				},
 				error: function(message){
@@ -67,6 +63,7 @@ $('.card img').hide();
 				dataType: "json",
 				success: function(result){
 					var query= "ISBN:" + isbn;
+
 					displayInformation( query, result );
 				},
 				error: function(message){
@@ -76,6 +73,7 @@ $('.card img').hide();
 
 	function displayInformation( isbn, response ){
 		var info = response;
+
 		if ( info[isbn] ) {
 			data = info[isbn];
 			var title = data.title;
@@ -104,6 +102,8 @@ $('.card img').hide();
 					subject_links += ` <a href="${data.subjects[i].url}">${data.subjects[i].name}</a> `;
 				}
 			}
+													}
+
 			var card = `<div class='card'>
 			<a href="${data.url}">
 			<img src='${covers}' alt='Avatar' /></a>
@@ -115,5 +115,4 @@ $('.card img').hide();
 			$('#card_holder').append( card );
 		}
 	}
-
 });
